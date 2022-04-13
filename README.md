@@ -1,4 +1,4 @@
-# dishrecipes
+# foodrecipes
 
 ## Project setup
 ```
@@ -20,5 +20,38 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Install router
+```
+npm install vue-router 
+```
+
+### Install Bootstrap
+```
+npm install bootstrap 
+```
+
+### Install axios
+```
+npm install axios 
+```
+
+### Architectural decisions
+```
+- The small size of the application
+- Higher performance
+- Learning Ease
+- Very flexible
+- Streamlined Integration
+- Improved Documentation
+- Progressive
+- Handy Conventions
+- Well-defined Ecosystem
+
+That's why we can choose Vue js.
+```
+
+### Automated Testing
+```
+- we can use Selenium for Automation testing.
+- we can use Jest for Unit testing.
+```
