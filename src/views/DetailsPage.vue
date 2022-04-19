@@ -78,27 +78,28 @@
 </template>
 
 <script>
+import {mapGetters,mapActions} from 'vuex';
+
 export default {
   name: "DetailsPage",
   components: {},
   data() {
     return {
       productName: "",
-      contentdetails: [],
     };
   },
+  computed: mapGetters(['contentdetails']),
+
   mounted() {
     this.productName = this.$route.params.id;
     console.log("this.pdDetails=>", this.productName);
     this.productDetails();
   },
   methods: {
+    ...mapActions(["getFoodDetails"]),
+
     productDetails() {
-      console.log("Product Details Page");
-      let uri = `https://www.themealdb.com/api/json/v1/1/search.php?s=${this.productName}`;
-      this.axios.get(uri).then((response) => {
-        this.contentdetails = response.data.meals[0];
-      });
+      this.getFoodDetails(this.productName);
     },
   },
 };

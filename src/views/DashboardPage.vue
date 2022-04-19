@@ -13,6 +13,7 @@
             />
             <span class="input-group-append">
               <button
+              id="searchbtn"
                 class="btn btn-outline-secondary border-left-0 border"
                 type="button"
                 @click="searchRecips"
@@ -38,7 +39,7 @@
                 class="btn bg-dark btn-outline-secondary border-left-0 border mt-4 mx-auto d-block btn_clr"
                 type="button"                
               >
-                <router-link :to="`/detailsPage/${list.strMeal}`">Product Details</router-link>
+                <router-link id="product" :to="`/detailsPage/${list.strMeal}`">Product Details</router-link>
               </button>
               </div>
             </div>
@@ -50,6 +51,8 @@
 </template>
 
 <script>
+
+import {mapGetters,mapActions} from 'vuex';
 export default {
   name: "DashboardPage",
   components: {},
@@ -59,29 +62,19 @@ export default {
       image: "",
       searchName: "",
       searchData: [],
-      listData: []
     };
   },
-  mounted () {
-  this.getDetails();
+  computed: mapGetters(['listData']),
+  created () {
+  this.getRandomDish()
   },
   methods: {
-    searchRecips() {      
-      console.log("this.searchName =>", this.searchName);
-      let uri = `https://www.themealdb.com/api/json/v1/1/search.php?s=${this.searchName}`;
-      this.axios.get(uri, {}).then((response) => {
-        this.listData = response.data.meals;
-        console.log("List Data => ", this.listData);
-      });
+    ...mapActions(["getRandomDish","getParticularFood"]),
+    searchRecips() { 
+      this.getParticularFood(this.searchName);
     },
-    getDetails(){
-        console.log("Product Details Click"); 
-        let uri = "https://www.themealdb.com/api/json/v1/1/random.php";
-        this.axios.get(uri).then((response) => {
-        this.listData = response.data.meals;
-      });
-
-    }
+ 
+    
   },
 };
 </script>
