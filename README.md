@@ -50,8 +50,15 @@ npm install axios
 That's why we can choose Vue js.
 ```
 
-### Automated Testing
+### Unit Testing
 ```
-- we can use Selenium for Automation testing.
-- we can use Jest for Unit testing.
+- Install Jest for Unit Testing
+- npm install jest
+
+- For testing coverage command
+
+- npm run test:unit -- --coverage
+
+
+
 ```

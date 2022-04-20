@@ -1,0 +1,35 @@
+/*--Navigation-----*/
+.navigation .bg-orange {background-color: #fc8019 !important;}
+.bg-orange .navbar-brand, .bg-orange .navbar-collapse a, .bg-orange .navbar-collapse a.nav-link{color:#fff !important;}
+
+/*--Dashboard Page-----*/
+.bg_ref .card {
+    padding: 15px;
+    border: 1px solid #d3d5df;
+  }
+  .bg_ref .card:hover {
+    padding: 15px;
+    border: 1px solid #d3d5df !important;
+    box-shadow: 0 4px 7px 0 rgb(218 220 230 / 60%);
+  }
+  .dish_desc {
+    font-size: 0.8rem;
+  }
+  .f_title {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .btn:focus, .btn:active:focus, .btn.active:focus{
+      outline:none;
+      box-shadow:none;
+  }
+  .btn_clr a{color:#fff;}
+  .btn_clr a:hover{color:#fc8019;}
+  .input-lg-width{width:320px !important;}
+  .input-group>.form-control{box-shadow:none;border-color:none;}
+  .input-group>.input-group-append>.btn.btn_color{background-color:#6c757d;color:#fff;border: none !important;}
+
+@media (min-width:320px) and (max-width:480px)
+{
+  .input-lg-width{width:200px !important;}
+}

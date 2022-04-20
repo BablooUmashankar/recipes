@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const searchApiUrl = `https://www.themealdb.com/api/json/v1/1/search.php`;
-const apiUrl = 'https://www.themealdb.com/api/json/v1/1/random.php';
+const apiUrl = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
 export async function getAllDish() {
     const response = await axios.get(apiUrl);
     return response;

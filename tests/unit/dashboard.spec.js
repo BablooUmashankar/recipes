@@ -13,14 +13,14 @@ describe("services says",()=>{
    })
 
    it('getAllDish api called with given url',async()=>{
-    const mockedResponse = {data:{mealName:"paneer"}};
+    const mockedResponse = {data:{mealName:"Cashew"}};
     axios.get.mockResolvedValue(mockedResponse);
     getAllDish();
     expect(axios.get).toHaveBeenCalledWith("https://www.themealdb.com/api/json/v1/1/random.php")
    })
 
    it("check getParticularDish with given url ",async() =>{
-    const mockedResponse = {data:{mealName:"paneer"}};
+    const mockedResponse = {data:{mealName:"Kumpir"}};
     axios.get.mockResolvedValue(mockedResponse);
     getParticularDish("panneer");
     expect(axios.get).toHaveBeenCalled()    
