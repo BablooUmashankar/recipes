@@ -28,7 +28,7 @@
   .input-lg-width{width:320px !important;}
   .input-group>.form-control{box-shadow:none;border-color:none;}
   .input-group>.input-group-append>.btn.btn_color{background-color:#6c757d;color:#fff;border: none !important;}
-
+  .FooterBottom .bg-orange {background-color: #fc8019 !important;}
 @media (min-width:320px) and (max-width:480px)
 {
   .input-lg-width{width:200px !important;}

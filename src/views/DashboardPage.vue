@@ -3,8 +3,7 @@
     <!-- Page Content-->
     <section class="pt-4">
       <div class="container px-lg-5">
-        <div class="row bg_ref gx-lg-5">
-          
+        <div class="row bg_ref gx-lg-5">          
           <div class="col-lg-4 col-xxl-4 mb-5" v-for="list in listData" :key="list.idMeal">
             <div class="card bg-light h-100">              
               <img :src="list.strMealThumb" />              

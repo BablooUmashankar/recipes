@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import DashboardPage from '../views/DashboardPage.vue'
-import DetailsPage from '../views/DetailsPage.vue'
-
+import DetailsPage from '../components/DetailsPage.vue'
+import PageNotFound from '../components/PageNotFound.vue'
 Vue.use(VueRouter)
 
 const routes = [
+  { path: '*', component: PageNotFound },
   {
     path: '/',
     name: 'home',

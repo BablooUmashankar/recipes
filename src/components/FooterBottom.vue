@@ -7,7 +7,3 @@
     </footer>
   </div>
 </template>
-
-<style scoped>
-.FooterBottom .bg-orange {background-color: #fc8019 !important;}
-</style>
